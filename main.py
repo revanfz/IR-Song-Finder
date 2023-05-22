@@ -41,12 +41,6 @@ def click(*args):
     obj.delete(0, 'end')
 
 
-def leave(*args):
-    obj.delete(0, 'end')
-    obj.insert(0, 'I am placeholder')
-    obj.focus()
-
-
 def cari_lagu():
     global input_text
     query = input_text.get().lower()
@@ -102,7 +96,6 @@ Button(homepage, text="Cari", font=("Times", 14, "bold"),
 obj.insert(0, 'Enter Text:- ')
 obj.pack(pady=10)
 obj.bind("<Button-1>", click)
-# obj.bind("<Leave>", leave)
 
 homepage.tkraise()
 window.mainloop()
